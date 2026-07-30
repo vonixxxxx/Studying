@@ -58,6 +58,69 @@ This list is about developing *taste* and *research judgment*, not technical ski
 
 ---
 
+## Track 0.5 — The Resource Stack: Tools, Channels, Practice Sites, Podcasts, Open Source
+
+Track 0 described the *habits* (commonplace book, spaced repetition, weekly public writing, Feynman-it). This section names the actual tools and resources that implement those habits, plus the broader media diet and hands-on project pipeline that should run underneath every stage above.
+
+### Note-taking & knowledge-management stack
+Don't scatter notes across five apps — pick this stack once and stay in it for ten years, because the compounding value of a commonplace book comes from it being one continuous, searchable, cross-linked body, not from switching tools every year.
+
+| Tool | Role |
+|---|---|
+| **Obsidian** | Your commonplace book / Zettelkasten from Track 0. Plain local text files (you own the data forever), bidirectional linking, and a graph view that visually surfaces the cross-field connections this whole plan is betting on — this is the single best fit for a STEM autodidact tracking interlinked ideas across math, physics, and AI. |
+| **Anki** | Spaced repetition for anything you never want to re-derive from scratch — theorem statements, key formulas, definitions. |
+| **GoodNotes** (iPad) or a **reMarkable** tablet | Handwritten math/physics notes and derivations — equation-heavy work is still faster and more natural by hand than typed, and a tablet lets you archive and search it. |
+| **Zotero** | Reference manager once you start reading arXiv/journal papers seriously (Stage 3 onward) — tag, annotate, and cite papers without losing track of what you've read. |
+| **Overleaf** | LaTeX in the browser, zero setup — use it the moment you write your first real problem set solutions or paper. |
+
+### YouTube channels (beyond 3Blue1Brown, Susskind, and Karpathy, already named above)
+| Channel | Best for |
+|---|---|
+| **Veritasium** | General physical intuition and genuinely excellent science storytelling — good for the daily casual-reading-habit slot. |
+| **StatQuest (Josh Starmer)** | Turns intimidating statistics/ML formulas into something you can actually hold in your head — the single best channel for building stats intuition before Casella & Berger. |
+| **Yannic Kilcher** | Critical, detailed paper walkthroughs (motivation, method, results, and what's actually wrong with the paper) — watch this to learn *how to read a paper skeptically*, not just to stay current. |
+| **Two Minute Papers** | Fast breadth — bite-sized summaries of new results, good for a "what's happening in the field this week" habit. |
+| **Numberphile / Computerphile** (Brady Haran) | Short, expert-led explorations of math and CS ideas — excellent daily-habit consumption. |
+| **PBS Space Time** | Physics depth beyond the standard curriculum — relativity, cosmology, QFT-adjacent topics presented rigorously but accessibly. |
+| **The Coding Train** (Daniel Shiffman) | Creative coding — directly feeds the Track 0 "build a toy of it" habit; makes programming feel playful rather than purely utilitarian. |
+| **Applied Science** (Ben Krasnow) | Real hands-on experimental hardware building — the physical-apparatus habit from Stage 2, modeled by an expert. |
+| **Steve Mould / Practical Engineering / Real Engineering** | Physical/engineering intuition, demos, and real-world failure analysis. |
+| **Robert Miles** | AI safety/alignment intuition — a good complement to the mechanistic interpretability material in Stage 4/7. |
+
+### Podcasts (for commute/gym/passive listening — never a substitute for active reading, always a supplement)
+| Podcast | Why |
+|---|---|
+| **Dwarkesh Podcast** | The most technically-prepared interviewer currently working in AI — long, deeply-researched conversations with frontier researchers (Karpathy, lab leaders, etc.); described by peers as close to a public peer-review process for the field. |
+| **Machine Learning Street Talk (MLST)** | Rigorous, hype-stripped technical discussion spanning AI, cognitive science, and philosophy of mind — the most substantive technical AI podcast currently running. |
+| **Lex Fridman Podcast** | Broad, long-form interviews across AI, robotics, physics, and mathematics — useful for hearing researchers reason out loud, not just present polished results. |
+| **Sean Carroll's Mindscape** | Physics and philosophy of science from a working theoretical physicist — good for the "why do we believe this" layer underneath the technical material. |
+| **In Our Time** (BBC Radio 4) | History of science and ideas — feeds the cross-disciplinary, Inventor's-Library side of this plan, not the technical side. |
+| **The Idea Factory's real-world cousin: Acquired** | Deep-dive business/company histories (including frontier-tech companies) — useful for understanding how research becomes an institution, echoing the Bell Labs and Apple books above. |
+| **80,000 Hours Podcast** | Career-strategy and AI-safety-adjacent conversations — useful specifically when making the credentialing and vertical-choice decisions in Stage 3/7. |
+
+### Practice websites (where you go to get unstuck, or to drill until something is automatic)
+| Site | Use |
+|---|---|
+| **Project Euler** | Math + programming problems, increasing difficulty — the best ongoing test of whether Stage 1 skills are actually automatic. |
+| **Brilliant.org** | Interactive, problem-first courses across math, physics, and CS — a good structured alternative when a textbook chapter isn't landing. |
+| **Advent of Code** (every December) | A month of daily programming puzzles — excellent low-stakes way to keep coding fluency sharp between bigger projects. |
+| **Codeforces / LeetCode** | Competitive programming and algorithm drills — directly supports the CLRS/6.006 work in Stage 1 and general coding-interview-grade fluency. |
+| **Exercism** | Mentored code practice with human review — useful specifically for closing the gap between "my code runs" and "my code is good." |
+| **Paul's Online Math Notes** (Lamar University) | Extremely clear worked examples for calculus/ODEs — the best free supplement when Apostol's proofs are clear but you want more computational practice. |
+| **Seeing Theory** (Brown University) | Fully interactive, visual introduction to probability — use it *before* Ross, the same way you use 3Blue1Brown before a rigorous math text. |
+| **Kaggle** | Real datasets, real competitions — already named in Stage 4, listed here again as your go-to practice site once ML fluency exists. |
+
+### Open-source projects to actually contribute to (not just star)
+Use GitHub's **`good first issue`** label and the community-maintained **`awesome-for-beginners`** list (github.com/MunGell/awesome-for-beginners) to find a live, currently-open entry point in any of these — the exact issue available will change by the time you read this, which is the point of using the label rather than a fixed task list:
+
+- **PyTorch** and **scikit-learn** — both maintain active `good first issue` queues; nothing teaches you how a serious ML codebase is actually engineered like fixing a real, reviewed bug in one.
+- **Hugging Face Transformers** and **Hugging Face LeRobot** — high-visibility, fast-moving, and directly relevant to Stage 4 and Stage 6.
+- **PyMC** — Bayesian modeling library, a good place to put the probability/statistics rigor from Stage 2/3 into practice on real inference code.
+- **MoveIt** — the standard open-source robotics manipulation planning platform, a direct, practical complement to the Lynch & Park material in Stage 6.
+- **MuJoCo, NVIDIA Isaac Lab, TransformerLens, ROS2** — already named earlier as core tools; treat them as contribution targets, not just consumption targets, once you're using them daily.
+
+---
+
 ## Stage 0 — The Bridge (Months 0-6)
 
 **Goal:** true algebraic fluency and fearless comfort writing a proof and a program, before calculus starts.
