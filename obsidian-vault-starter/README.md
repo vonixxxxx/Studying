@@ -2,13 +2,25 @@
 
 This is a ready-to-open Obsidian vault skeleton built for the note-taking stack recommended in `curriculum-scratch-to-expert.md`: Obsidian as the commonplace book, LaTeX for math, Excalidraw for sketching, Zotero for papers, and Anki for spaced repetition. It ships as folders and templates only — no personal notes, no plugin binaries — so it's safe to keep in a shared repo and drop straight into your own Obsidian.
 
-**Important:** Obsidian is a local desktop/mobile app; nothing in this remote session can install it on your machine. What's here is the vault structure and templates — you do the one-time setup below yourself, in your own Obsidian, on your own computer (10-15 minutes).
+**Important:** Obsidian is a local desktop/mobile app; nothing in this remote session can install it on your machine. What's here is the vault structure and templates — you do the one-time setup below yourself, in your own Obsidian, on your own computer (5-10 minutes now — see "What's already pre-configured" below for why it's shorter than it used to be).
 
 ## 0. Install Obsidian and open this vault
 
 1. Download Obsidian free from **obsidian.md** (Mac/Windows/Linux/iOS/Android).
 2. On first launch, choose **"Open folder as vault"** and select this `obsidian-vault-starter` folder (or wherever you've unzipped/cloned it).
-3. That's it — you now have a working vault with the folder structure below.
+3. That's it — you now have a working vault with the folder structure below, and (see next section) most of the configuration already done.
+
+## What's already pre-configured, and the one thing that deliberately isn't
+
+I went as far as this sandbox honestly allows, and stopped at a real boundary rather than fake the rest. Here's exactly what that means:
+
+**Already done for you, in this vault:**
+- `.obsidian/app.json` — new notes default to `00-Inbox`, attachments default to `Attachments`, wikilinks are on.
+- `.obsidian/community-plugins.json` — Templater, Excalidraw, LaTeX Suite, Dataview, Zotero Integration, and Obsidian Git are pre-listed as enabled, so the moment you install each one below, it's already switched on — no extra toggle.
+- `.obsidian/plugins/templater-obsidian/data.json` — Templater is pre-configured to point at the `Templates` folder *and* to auto-apply the right template by folder (a new note in `02-Math` already opens as a Concept Note, `06-Papers` as a Paper Note, `07-Projects` as a Project Log, etc. — no manual "create from template" step per note).
+- Two fully filled example notes are already in the vault so you can see the system working before you write anything yourself: `02-Math/Example - Eigenvectors.md` (a complete Concept Note, Anki blocks included) and `01-Commonplace-Book/Example Daily Note.md` (a complete Daily Note).
+
+**What I deliberately did not do, and why:** I tried to fetch and pre-install the actual plugin code so you'd never need to touch the Community Plugins browser at all. That failed for a good reason, not a lazy one: this sandbox's GitHub access is scoped to your own repo, so it can't reach third-party plugin authors' release binaries — and honestly, even if it could, downloading and running someone else's compiled JavaScript from outside Obsidian's own verified plugin channel is a worse security posture than the alternative. The one-click **Install** button in Obsidian's Community Plugins browser is exactly that verified channel. So that one step — clicking Install on 5-6 plugins — is the one piece of this setup that stays manual, on purpose, and it takes about 60 seconds per plugin.
 
 ## Folder structure
 
@@ -23,19 +35,14 @@ This is a ready-to-open Obsidian vault skeleton built for the note-taking stack 
 | `Attachments` | Images, diagrams, PDFs. |
 | `Templates` | The six templates below. |
 
-## 1. Turn on the templates
+## 1. Turn on Community Plugins, then install Templater (30 seconds)
 
-1. Settings → Community plugins → turn on Community plugins (if prompted) → Browse → search **"Templater"** → install and enable.
-2. Templater settings → set **Template folder location** to `Templates`.
-3. Now, when creating a new note, use the command palette (`Ctrl/Cmd+P`) → **"Templater: Create new note from template"** → pick one of:
-   - **Daily Note** — fill in every day (this is Track 0's daily loop, made concrete).
-   - **Weekly Review** — fill in every week; this is where your public post gets drafted before you publish it.
-   - **Concept Note** / **Theorem Note** — one per idea, in the relevant subject folder.
-   - **Paper Note** — one per paper.
-   - **Project Log** — one per hands-on project.
-4. Optional: bind a hotkey to each in Settings → Hotkeys so creating the right note type is one keystroke.
+1. Settings → Community plugins → **Turn on community plugins** (Obsidian shows a safety warning the first time — this is normal, it's the same warning for every vault).
+2. Browse → search **"Templater"** → Install → Enable. Because of the pre-filled config above, it's already pointed at the `Templates` folder and already wired to auto-apply the right template per folder — nothing left to configure.
+3. Test it: create a new note inside `02-Math` — it should open already formatted as a Concept Note. If you'd rather trigger a template manually instead (e.g. for Daily Note or Weekly Review, which aren't tied to a single folder), use the command palette (`Ctrl/Cmd+P`) → **"Templater: Create new note from template"**.
+4. Optional: bind a hotkey to your most-used templates in Settings → Hotkeys.
 
-## 2. Install the rest of the plugin stack
+## 2. Install the rest of the plugin stack (about a minute each)
 
 All via Settings → Community plugins → Browse → search the name → Install → Enable:
 

@@ -1,0 +1,23 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [["", ""]],
+  "trigger_on_file_creation": false,
+  "auto_jump_to_cursor": false,
+  "enable_folder_templates": true,
+  "folder_templates": [
+    { "folder": "01-Commonplace-Book", "template": "Templates/Daily Note.md" },
+    { "folder": "02-Math", "template": "Templates/Concept Note.md" },
+    { "folder": "03-Physics", "template": "Templates/Concept Note.md" },
+    { "folder": "04-CS-and-AI", "template": "Templates/Concept Note.md" },
+    { "folder": "05-Robotics-and-Infra", "template": "Templates/Concept Note.md" },
+    { "folder": "06-Papers", "template": "Templates/Paper Note.md" },
+    { "folder": "07-Projects", "template": "Templates/Project Log.md" }
+  ],
+  "enable_file_templates": true,
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": ["", "", "", "", ""],
+  "startup_templates": []
+}
