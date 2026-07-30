@@ -1,15 +1,95 @@
 # From High School Algebra to the Epicentre: A Full Curriculum
-*Companion to `ai-robotics-expertise-roadmap.md`. That document is the strategic "why" and "which niches." This document is the operational "how" — books, lectures, projects, labs, competitions, and people — assuming you start with nothing but high school algebra, and aimed at producing both a frontier researcher and an inventor in the Feynman/Jobs/Bell-Labs mold: someone with bulletproof technical depth *and* the taste, curiosity, and cross-disciplinary habits that turn depth into original work.*
+*Companion to `ai-robotics-expertise-roadmap.md`. That document is the strategic "why" and "which niches." This document is the operational "how" — books, lectures, projects, labs, competitions, and people — aimed at producing both a frontier researcher and an inventor in the Feynman/Jobs/Bell-Labs mold: someone with bulletproof technical depth *and* the taste, curiosity, and cross-disciplinary habits that turn depth into original work.*
 
-## How to use this document
+## Two paths through this document
 
-This is not a reading list to complete linearly and then "graduate." Three things run **concurrently, from day one, forever** — not sequentially, and not confined to any one stage:
+This document now has two entry points, built for two different learning styles. Pick the one that matches how you actually learn — or run both, as intended here.
 
-1. **Rigorous technical mastery** — the staged curriculum below (math, physics, CS, AI, infra, robotics).
-2. **Intuition-building and reading habits** — Track 0, immediately below. This starts *today*, not after Stage 0.
-3. **Creative/inventive practice** — a parallel library and set of habits (the "Inventor's Library" and tinkering practice) that most technical curricula omit and that is precisely what separates a competent expert from Feynman, Shannon, or Jobs.
+1. **The Fast Track** (immediately below) — a concept-first, top-down, 1-year path. It starts with AI/ML directly — you're training and dissecting real models in week one — and pulls in exactly the math, statistics, and physics each concept needs, right when you need it, not before. When something doesn't make sense, you work *backward* from the concept into the specific prerequisite, learn just that piece, and come straight back to the project. This is the path for someone who learns fastest by first seeing why a piece of math matters, then going and getting it.
+2. **The Basics** (Stage 0 onward, further below) — the original bottom-up, multi-year sequence: algebra → calculus → physics → rigorous math → AI → infra → robotics → research, each stage building carefully on the last. This is not obsolete — it's the reference library the Fast Track sends you into whenever it says "go get X." Read it *simultaneously* with the Fast Track, not after it: the Fast Track tells you exactly which section of the Basics to open at exactly the moment you need it, and you can always choose to read a Basics stage in full for the complete, unhurried, fully rigorous version of anything the Fast Track only gave you "just enough" of.
 
-Every stage ends with a **"prove it" milestone** — a concrete, checkable output. If you can't do the milestone, you're not done, regardless of how many books you've "read." Treat any week where only the technical track moved, and not the intuition or creative tracks, as a warning sign.
+Three things still run **concurrently, from day one, forever**, regardless of which path you're on:
+
+1. **Rigorous technical mastery** — Fast Track and/or Basics, per above.
+2. **Intuition-building and reading habits** — Track 0, immediately below. This starts *today*.
+3. **Creative/inventive practice** — the "Inventor's Library" and tinkering practice, which most technical curricula omit and is precisely what separates a competent expert from Feynman, Shannon, or Jobs.
+
+Every stage and every Fast Track module ends with a **"prove it" milestone** — a concrete, checkable output. If you can't do the milestone, you're not done, regardless of how many books you've "read."
+
+---
+
+## The Fast Track — A 1-Year, Concept-First Path to the Epicentre
+
+### The philosophy, stated plainly
+
+Most curricula (including the Basics half of this document) are bottom-up: months of algebra and calculus before you ever touch a neural network. That's the right approach for building a foundation nobody can ever poke a hole in — and it's why the Basics still exist below. But it is not the fastest way for an unusually strong, fast learner to reach research-level fluency across the math–physics–AI–robotics intersection, for a simple reason: motivation and retention are both dramatically higher when you learn a piece of math *because you are currently blocked by not knowing it*, rather than because it's "next in the sequence" and might matter someday. This is the same insight behind fast.ai's "teach the whole game first" philosophy and behind *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong — free PDF at mml-book.github.io) — arguably the single best spine resource for this entire Fast Track, since it was written explicitly to teach exactly the math a given ML method needs, in the order ML needs it, not in the order a math department would teach it.
+
+**The operating rule for this whole path: when a project stalls because you don't understand a piece of math, physics, or CS underneath it, stop, go get exactly that piece — no more — from the resource listed for that module (or from the relevant Basics stage for the fully rigorous version), and come straight back to the project.** Do not pre-emptively "finish" a subject before starting the next module. The spiral will bring you back to every subject multiple times at increasing depth — that's by design, not a gap.
+
+**Honest calibration, carried over from the earlier "is this physically possible" discussion:** this path is built to get a genuinely fast learner to elite technical fluency and a real portfolio of original work across the intersection in one year. It does **not** compress the parts of Stage 7 (below) that run on other people's calendars — journal review cycles, REU program dates, a mentor's response time, a real reputation built over repeated public contact with a field. Those still take additional real years no matter how fast you learn. What compresses is the knowledge and the portfolio; what doesn't is anything that requires other people's clocks.
+
+### Month 1 — The whole game, then backprop from scratch
+**Project:** Train a real image classifier end-to-end in PyTorch this week, without yet understanding every internal detail (fast.ai's Practical Deep Learning for Coders, lesson 1, is built exactly for this — you get a working, reasonably good model on day one). Then spend the rest of the month tearing it open: implement backpropagation yourself, from raw NumPy, no autograd, following Andrej Karpathy's "Zero to Hero" series (starting with micrograd) until your from-scratch version matches PyTorch's gradients exactly.
+**Math you need right now:** vectors, matrices, and matrix multiplication as *operations*, not proofs (3Blue1Brown's *Essence of Linear Algebra*, episodes 1-3 only); derivatives and the chain rule as *rates of change composing* (3Blue1Brown's *Essence of Calculus*, episodes 1-4); the specific matrix calculus backprop needs (Terence Parr & Jeremy Howard, *"The Matrix Calculus You Need for Deep Learning,"* free at explained.ai — this single short paper is scoped exactly to this problem, don't go further than it yet).
+**If you get stuck and need the full rigor:** go backward into Stage 1's linear algebra row (Strang/Axler) or Stage 1's calculus row (Apostol) below — read only the specific section that's blocking you, then return here.
+**Prove it:** your from-scratch backprop matches PyTorch's autograd on a small network to several decimal places; you can explain, on a whiteboard with no notes, why the chain rule is the entire content of backpropagation.
+
+### Month 2 — Probability, statistics, and classical ML
+**Project:** Implement linear regression, logistic regression, and a naive Bayes classifier from scratch (no scikit-learn), and understand each one's loss function as a maximum-likelihood argument, not just a formula to minimize.
+**Math you need right now:** the interactive, visual first pass on probability at **Seeing Theory** (Brown University); *An Introduction to Statistical Learning* (James, Witten, Hastie, Tibshirani — free PDF, ISLR) chapters 2-4, which is deliberately gentler and more ML-directed than a full mathematical-statistics text; Bayes' rule and maximum likelihood estimation specifically, from *Mathematics for Machine Learning* ch. 5-8.
+**If you get stuck:** Stage 2's probability row (Ross) below for the fully worked computational treatment, or Stage 2's statistics row (Casella & Berger) for full mathematical rigor on estimators.
+**Prove it:** derive, from the maximum-likelihood principle, why minimizing mean-squared error is equivalent to assuming Gaussian noise — in writing, from scratch.
+
+### Month 3 — Deep learning depth: CNNs and why optimizers work
+**Project:** Train a CNN on real images (CIFAR-10 or similar) using Stanford CS231n's assignments as your problem set; when you hit the question "why does Adam train faster/more reliably than plain SGD," stop and actually answer it instead of just importing `torch.optim.Adam`.
+**Math you need right now:** convexity, gradient descent convergence *intuition* (not full proofs yet) from Boyd & Vandenberghe's *Convex Optimization* — read only the chapters on gradient descent and momentum; eigenvalues of the Hessian as the reason ravines/saddle points slow down training (revisit the 3Blue1Brown eigenvector picture from Month 1, now applied to a loss landscape).
+**If you get stuck:** Stage 3's optimization rows (Boyd, then Nocedal & Wright) below for the full convergence proofs.
+**Prove it:** implement SGD, momentum, and Adam from scratch (no `torch.optim`), and produce a plot showing why each converges differently on a deliberately ill-conditioned toy loss surface.
+
+### Month 4 — Sequence models and transformers
+**Project:** Follow Karpathy's nanoGPT build, end to end, until you have a working, from-scratch GPT trained on a small corpus.
+**Math you need right now:** attention as matrix multiplication (3Blue1Brown's neural network series covers this visually); cross-entropy and perplexity as information-theoretic quantities (Cover & Thomas, *Elements of Information Theory*, chapter 2 *only* — entropy and KL divergence, not the whole book yet).
+**If you get stuck:** Stage 4's transformer row (the original paper + Jay Alammar's illustrated posts) below for a second pass at the architecture; Stage 3's information theory row (full Cover & Thomas) if you want the complete theory now instead of later.
+**Prove it:** your from-scratch GPT trains and its loss curve matches nanoGPT's reference numbers; you can derive perplexity from cross-entropy from first principles, unaided.
+
+### Month 5 — Reinforcement learning and control
+**Project:** Implement DQN and then PPO from scratch (not Stable-Baselines3) and solve CartPole, then a harder control task.
+**Math/physics you need right now:** Markov decision processes and the Bellman equation (Csaba Szepesvári's free, short monograph *Algorithms for Reinforcement Learning* is a deliberately condensed alternative to reading all of Sutton & Barto up front); just enough Newtonian mechanics to actually understand CartPole's own equations of motion (Morin's *Introduction to Classical Mechanics*, the chapter on rotational motion only).
+**If you get stuck:** Stage 4's full RL row (Sutton & Barto, David Silver's course, CS285) below for complete depth; Stage 2's mechanics rows for the full physics treatment.
+**Prove it:** your from-scratch PPO solves CartPole and one harder continuous-control environment; you can derive the Bellman equation from the definition of the value function, unaided.
+
+### Month 6 — Real robots: kinematics, dynamics, control
+**Project:** Move your RL agent into a simulated robot arm in MuJoCo; implement forward and inverse kinematics and a PID or MPC controller by hand.
+**Math/physics you need right now, and this is where it becomes unavoidable:** rigid-body configuration as SE(3) and Lie groups — read *only* the forward-kinematics chapters of Murray, Li & Sastry's *A Mathematical Introduction to Robotic Manipulation* (free PDF) or the equivalent early chapters of Lynch & Park's *Modern Robotics*; Lagrangian mechanics *specifically as applied to a robot arm* (Goldstein's early chapters, or better, Lynch & Park's own dynamics chapter, which derives it in robotics notation directly).
+**If you get stuck:** Stage 3's differential-geometry/Lie-group row below for the full mathematical treatment of manifolds and Lie groups in general, not just the robotics-specific slice.
+**Prove it:** derive the forward and inverse kinematics of a simple arm from the Lie-group/twist formalism and implement a working MPC controller for it in simulation — this is the same milestone as Stage 6's "prove it" below, reached in month 6 instead of year 6.
+
+### Month 7 — World models and physics-informed learning
+**Project:** Build a small physics-informed neural network (PINN) for a simple dynamical system (a pendulum or double pendulum) and compare it against a plain learned model with no physics prior.
+**Math/physics you need right now:** ODEs revisited at the level of actually solving the specific system you're modeling (3Blue1Brown's *Differential Equations* series, then the relevant Morin/Goldstein chapter for the exact system); enough statistical mechanics to understand *why* diffusion models work as denoising a stochastic process (Schroeder's *Thermal Physics*, the entropy and Langevin-adjacent chapters only).
+**If you get stuck:** Stage 2's full ODE and stat-mech treatment below; the original PINN literature (Raissi, Perdikaris, Karniadakis) for the rigorous formulation.
+**Prove it:** your PINN outperforms the plain model on out-of-distribution initial conditions, and you can explain in writing exactly why the physics prior generalizes better.
+
+### Month 8 — AI infrastructure: making it fast
+**Project:** Profile your slowest training loop from the previous seven months, find the actual bottleneck (not a guessed one), and write a custom CUDA kernel that measurably beats the naive PyTorch op.
+**CS/math you need right now:** just enough computer architecture to reason about memory hierarchy and bandwidth vs. compute-bound operations (Patterson & Hennessy's entry chapters only); *Programming Massively Parallel Processors* (Kirk & Hwu) chapters on the specific kernel pattern you need (reduction, matrix multiply, etc.) — not the whole book.
+**If you get stuck:** Stage 5's full systems stack below (OS, compilers, DNN accelerator design) for complete depth.
+**Prove it:** a profiler shows your custom kernel is measurably faster than the PyTorch op it replaces, and you can explain exactly which memory-hierarchy effect you exploited to get the speedup.
+
+### Month 9 — The rigor sprint: go back and actually prove things
+**Project:** By now you have real, motivated questions ("does gradient descent actually always converge on this kind of loss surface? why does the Kalman filter's update rule actually follow from Bayes' rule? why do complex eigenvalues show up in stability analysis?") that a rigorous math pass will directly answer, instead of feeling like abstract homework. Spend this month doing a dedicated, condensed real-analysis and measure-theoretic-probability sprint.
+**Resources:** Abbott's *Understanding Analysis* end to end (it's short); the specific Rudin chapters that address a question you actually hit in Months 1-8; Durrett's measure-theoretic probability, chapters 1-2 only, for the rigorous foundation under everything you've been doing computationally with probability since Month 2.
+**Prove it:** write a complete epsilon-delta proof of a nontrivial analysis theorem cold, without notes, and explicitly connect it back to one specific thing you built in Months 1-8 that you previously only trusted empirically.
+
+### Month 10 — Mechanistic interpretability
+**Project:** Reproduce one small, real interpretability finding on an open-weight model using Neel Nanda's **TransformerLens**.
+**Math you need right now, revisited at depth:** singular value decomposition and eigenvectors of weight matrices as *feature directions* — this is the same linear algebra from Month 1, now at a much deeper level, which is exactly the point of the spiral.
+**If you get stuck:** Stage 4's full interpretability row (Olah's Circuits work, the Anthropic transformer-circuits paper) below.
+**Prove it:** find and document a specific circuit in a small open model, the same milestone as Stage 4's "prove it" below.
+
+### Months 11-12 — Capstone synthesis, write-up, and one real contribution
+**Project:** Pick one Layer-2 vertical from `ai-robotics-expertise-roadmap.md` (robotics, materials, quantum, etc.) and build one original small project combining at least three of the previous ten months' skills — e.g., a physics-informed world model (Month 7) controlling a simulated robot (Month 6) via a policy interpreted for safety (Month 10), running efficiently thanks to the kernel work (Month 8). Write the whole thing up publicly. Land one real, reviewed, non-trivial open-source PR (see Track 0.5's open-source list) before the year ends.
+**Prove it:** a single public artifact — code plus a write-up — that combines multiple pillars and that a stranger in the field could look at and conclude you're serious. This is Stage 7's "prove it" below, reached in month 12 instead of year 5-10 — with the explicit caveat, restated once more, that the *reputation* that normally accretes around that artifact over years of conferences and relationships still takes real time to build; the artifact itself does not.
 
 ---
 
@@ -120,6 +200,10 @@ Use GitHub's **`good first issue`** label and the community-maintained **`awesom
 - **MuJoCo, NVIDIA Isaac Lab, TransformerLens, ROS2** — already named earlier as core tools; treat them as contribution targets, not just consumption targets, once you're using them daily.
 
 ---
+
+## The Basics — Full Bottom-Up Reference (Stages 0-7)
+
+Everything from here down is the original multi-year, bottom-up sequence. Treat it as the reference library the Fast Track above keeps sending you into — read a stage in full whenever you want the complete, unhurried, fully rigorous version of something the Fast Track only gave you "just enough" of, or run it as its own multi-year path if you'd rather build the foundation before the applications, subject by subject.
 
 ## Stage 0 — The Bridge (Months 0-6)
 
