@@ -1,41 +1,41 @@
 # 3. Oscillations and Waves (IPhO Syllabus: Oscillations and Waves)
 
-This topic is the payoff for the ODE and complex-number work in `00-mathematical-toolkit.md`, and it's the direct bridge into `04-optics.md` (light is a wave) and half of `02-electromagnetism.md` (AC circuits are driven oscillators). Get the single damped-driven-oscillator equation genuinely solid here — it recurs, with only the names of the variables changed, in at least four other topics in this curriculum.
+This topic is the payoff for the ODE and complex-number work below, and the direct bridge into `04-optics.md` (light is a wave) and half of `02-electromagnetism.md` (AC circuits are driven oscillators). Get the single damped-driven-oscillator equation genuinely solid here — it recurs, with only the variable names changed, in at least four other topics in this curriculum.
 
 ## Subtopics, in dependency order
 
-| Subtopic | Math prerequisite (Tier 1) | If still stuck → deeper math | Physics text (Tier 1) | Tier-1 problem set |
+| Subtopic | Math prerequisite — exact source, read this first | If still stuck → deeper math | Physics text (Tier 1) | Tier-1 problem set |
 |---|---|---|---|---|
-| Simple harmonic motion | Linear, constant-coefficient, second-order ODEs — `00-mathematical-toolkit.md` | — | A.P. French, *Vibrations and Waves*, ch. 1-2 | French ch. 1-2 |
-| Damped oscillations | Same ODE with a first-derivative term; complex roots of the characteristic equation | Boas ch. 8's section on complex characteristic roots if the underdamped/overdamped/critically-damped case split isn't fully clear | French ch. 3 | French ch. 3 |
-| Driven oscillations, resonance | Complex exponentials as a solution method (assume `x = Ae^{iωt}`, take the real part at the end) | — | French ch. 4 | French ch. 4 |
-| Coupled oscillators, normal modes | Eigenvalues/eigenvectors of the coupling matrix — `00-mathematical-toolkit.md` linear algebra row | Goldstein, *Classical Mechanics*, ch. 6 ("Small Oscillations") for the full generalized-coordinates, mass-matrix/stiffness-matrix treatment of `N` coupled oscillators at once | French ch. 5 | French ch. 5; Kalda's *Mechanics* handout also has a normal-modes section worth cross-referencing |
-| The wave equation, traveling and standing waves | Partial differential equations, separation of variables — `00-mathematical-toolkit.md` | Howard Georgi, *The Physics of Waves* (free), ch. 1-2, for a full derivation of the wave equation from a discrete chain of coupled oscillators taken to the continuum limit — this is the single best way to see *why* waves and oscillators are the same physics at different scales | French ch. 6-7 | French ch. 6-7 |
-| Sound waves, the Doppler effect | Same PDE machinery, applied to pressure/density fields | — | French ch. 8 | French ch. 8 |
-| Superposition, beats, group vs. phase velocity | Fourier series (`00-mathematical-toolkit.md`) for the non-monochromatic case | Georgi's *Physics of Waves*, dispersion chapter, for group velocity derived properly from a wave packet's Fourier decomposition rather than the usual hand-wavy `dω/dk` definition | French's relevant sections | French's problems on this topic |
+| Simple harmonic motion | Morris Tenenbaum & Harry Pollard, *Ordinary Differential Equations*, Dover Publications, 1985, the lessons on linear, constant-coefficient, second-order ODEs | — | A.P. French, *Vibrations and Waves* (MIT Introductory Physics Series), W.W. Norton & Company, 1971, ch. 1-2 | French ch. 1-2 |
+| Damped oscillations | Same Tenenbaum & Pollard lessons, the case of complex roots of the characteristic equation | Mary L. Boas, *Mathematical Methods in the Physical Sciences*, 3rd ed., Wiley, 2005, ch. 8 ("Ordinary Differential Equations"), the section on complex characteristic roots | French, ch. 3 | French ch. 3 |
+| Driven oscillations, resonance | Boas, ch. 2 ("Complex Numbers") — assume `x = Ae^{iωt}`, take the real part at the end | — | French, ch. 4 | French ch. 4 |
+| Coupled oscillators, normal modes | Gilbert Strang, *Introduction to Linear Algebra*, 5th ed., Wellesley-Cambridge Press, 2016, the "Eigenvalues and Eigenvectors" chapter | Herbert Goldstein, Charles P. Poole Jr. & John L. Safko, *Classical Mechanics*, 3rd ed., Addison Wesley, 2002, ch. 6 ("Small Oscillations") for the full `N`-body mass-matrix/stiffness-matrix treatment | French, ch. 5 | French ch. 5; Kalda's *Mechanics* handout also has a normal-modes section |
+| The wave equation, traveling and standing waves | Boas, ch. 13 ("Partial Differential Equations"), separation of variables | Howard Georgi, *The Physics of Waves*, Prentice Hall, 1993 (free, author-hosted PDF), ch. 1-2, deriving the wave equation from a discrete chain of coupled oscillators taken to the continuum limit | French, ch. 6-7 | French ch. 6-7 |
+| Sound waves, the Doppler effect | Same PDE machinery, applied to pressure/density fields | — | French, ch. 8 | French ch. 8 |
+| Superposition, beats, group vs. phase velocity | Boas, ch. 7 ("Fourier Series and Transforms") | Georgi's dispersion chapter, deriving group velocity properly from a wave packet's Fourier decomposition | French's relevant sections | French's problems on this topic |
 
 ## Tier 2 — Graduate depth
 
-| Source | What it adds beyond Tier 1 |
+| Exact source | What it adds beyond Tier 1 |
 |---|---|
-| Howard Georgi, *The Physics of Waves* (freely available, author-hosted) | A full course built entirely around the thesis that "waves" is one unified subject spanning mechanical waves, sound, E&M, and quantum wavefunctions — read this cover to cover once French feels solid, since it directly sets up both `04-optics.md` and the quantum-mechanics sections of `06-modern-physics-relativity-and-quantum.md` |
-| Goldstein, Poole & Safko, *Classical Mechanics*, ch. 6 | The fully general `N`-coupled-oscillator normal-mode machinery (mass matrix, stiffness matrix, simultaneous diagonalization) — makes any finite coupled-oscillator IPhO problem, however many masses it has, look like the same three-line calculation |
+| Howard Georgi, *The Physics of Waves*, Prentice Hall, 1993 (freely available, author-hosted) | A full course built around the thesis that mechanical waves, sound, E&M, and quantum wavefunctions are one unified subject — sets up both `04-optics.md` and `06-modern-physics-relativity-and-quantum.md` |
+| Herbert Goldstein, Charles P. Poole Jr. & John L. Safko, *Classical Mechanics*, 3rd ed., Addison Wesley, 2002, ch. 6 | The fully general `N`-coupled-oscillator normal-mode machinery |
 
 ## Tier 3 — Research-literature depth
 
-| Source | Why it's here |
+| Exact source | Why it's here |
 |---|---|
-| Lord Rayleigh (John William Strutt), *The Theory of Sound* (1877, 2 volumes; public domain, widely available via Internet Archive) | The original comprehensive treatment of acoustic wave phenomena — dated notation, but the physical reasoning about resonance, normal modes, and the physics of musical instruments is still the deepest treatment most physicists will ever encounter |
-| L.D. Landau & E.M. Lifshitz, *Mechanics*, the chapters on small oscillations | Landau's characteristically terse, general derivation of the normal-mode problem directly from the Lagrangian, including the general theory of parametric resonance — a genuinely research-adjacent tool (parametric resonance drives the "pumping a swing" and "Paul trap" style problems that occasionally appear at the hardest end of IPhO) |
+| John William Strutt (Lord Rayleigh), *The Theory of Sound*, Macmillan, Vol. 1: 1877, Vol. 2: 1878 (public domain, widely available via Internet Archive) | The original comprehensive treatment of acoustic wave phenomena, resonance, and normal modes |
+| L.D. Landau & E.M. Lifshitz, *Mechanics* (Course of Theoretical Physics, Vol. 1), 3rd ed., Butterworth-Heinemann, 1976, the small-oscillations chapters | Terse, general derivation of the normal-mode problem from the Lagrangian, including the general theory of parametric resonance (relevant to "pumping a swing" style problems) |
 
 ## Problem sources specific to this topic
 
-- French's own problems, worked chapter by chapter.
-- Irodov's oscillations chapter.
-- Kalda's handouts don't have a dedicated "waves" file distinct from mechanics/electromagnetism, so pull oscillation problems from those two handouts plus this topic's textbook problems.
-- *200 (More) Puzzling Physics Problems*'s oscillation/wave sections.
+- A.P. French's own problems, worked chapter by chapter.
+- I.E. Irodov, *Problems in General Physics*, Mir Publishers, 1981 — oscillations chapter.
+- Jaan Kalda's *Mechanics* and *Electromagnetism* handouts (no dedicated waves handout exists — pull oscillation problems from these two).
+- P. Gnädig, G. Honyek & K.F. Vigh, *200 Puzzling Physics Problems*, Cambridge University Press, 2001, and its 2016 sequel — oscillation/wave sections.
 - ipho-unofficial.org archive, filtered to oscillations/waves.
 
 ## Self-check milestone
 
-Given an arbitrary system of `N` masses connected by springs (any topology, not just a line), write down the mass matrix and stiffness matrix directly from inspection within a few minutes, and correctly state — without fully solving the eigenvalue problem — how many normal modes it has and what symmetry, if any, lets you guess one of the mode shapes without computation.
+Given an arbitrary system of `N` masses connected by springs (any topology), write down the mass matrix and stiffness matrix directly from inspection within a few minutes, and state how many normal modes it has and which symmetry, if any, lets you guess one mode shape without computation.

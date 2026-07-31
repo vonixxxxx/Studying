@@ -1,40 +1,40 @@
 # 4. Electromagnetic Waves and Optics (IPhO Syllabus: Electromagnetic Waves and Optics)
 
-Optics splits cleanly into two regimes that need different math and different intuition: geometric optics (rays, no wave effects — mostly algebra and trigonometry) and physical/wave optics (interference, diffraction, polarization — everything from `03-oscillations-and-waves.md`'s wave toolkit, now applied to light specifically). Don't skip straight to physical optics because it looks more "advanced" — a large fraction of IPhO optics points come from fast, clean geometric-optics ray tracing under time pressure.
+Optics splits into two regimes that need different math: geometric optics (rays, mostly algebra/trigonometry) and physical/wave optics (interference, diffraction, polarization — everything from `03-oscillations-and-waves.md`'s toolkit, now applied to light). Don't skip straight to physical optics because it looks more advanced — a large fraction of IPhO optics points come from fast, clean geometric-optics ray tracing under time pressure.
 
 ## Subtopics, in dependency order
 
-| Subtopic | Math prerequisite (Tier 1) | If still stuck → deeper math | Physics text (Tier 1) | Tier-1 problem set |
+| Subtopic | Math prerequisite — exact source, read this first | If still stuck → deeper math | Physics text (Tier 1) | Tier-1 problem set |
 |---|---|---|---|---|
-| Reflection, refraction, Snell's law | Trigonometry | — | Eugene Hecht, *Optics*, geometric-optics chapters | Hecht's geometric-optics problems |
-| Thin lenses and mirrors, ray tracing, the thin-lens equation | Algebra, similar triangles | — | Hecht, same chapters | Hecht's problems; build real speed here since these are the fastest points on any IPhO optics section |
+| Reflection, refraction, Snell's law | Jay Abramson et al., *Precalculus*, OpenStax, 2015 (free), trigonometry chapters | — | Eugene Hecht, *Optics*, 5th ed., Pearson, 2016, geometric-optics chapters | Hecht's geometric-optics problems |
+| Thin lenses and mirrors, ray tracing, the thin-lens equation | OpenStax *Precalculus*, algebra/similar-triangles review | — | Hecht, same chapters | Hecht's problems — build real speed here |
 | Dispersion | — | — | Hecht | Hecht |
-| Interference (double-slit, thin films) | Superposition of waves with a phase difference — `00-mathematical-toolkit.md`/`03-oscillations-and-waves.md` complex-exponential method | — | Hecht's interference chapter | Hecht's problems |
-| Diffraction (single slit, gratings) | Fourier transforms — `00-mathematical-toolkit.md` | Howard Georgi, *The Physics of Waves*, the diffraction chapter, for the full derivation of a diffraction pattern as the Fourier transform of the aperture's transmission function — this reframing makes grating/multi-slit problems a matter of reading off a known Fourier-transform pair rather than re-deriving from scratch each time | Hecht's diffraction chapter | Hecht's problems |
-| Polarization | Vector nature of the E-field, Malus's law | — | Hecht's polarization chapter | Hecht's problems |
-| Optical instruments (microscopes, telescopes, resolution limits) | Combines geometric optics and the diffraction limit above | — | Hecht | Hecht's problems |
+| Interference (double-slit, thin films) | Mary L. Boas, *Mathematical Methods in the Physical Sciences*, 3rd ed., Wiley, 2005, ch. 2 ("Complex Numbers") — superposition of waves with a phase difference via complex exponentials | — | Hecht's interference chapter | Hecht's problems |
+| Diffraction (single slit, gratings) | Boas, ch. 7 ("Fourier Series and Transforms") | Howard Georgi, *The Physics of Waves*, Prentice Hall, 1993 (free), the diffraction chapter — a diffraction pattern as the Fourier transform of the aperture's transmission function | Hecht's diffraction chapter | Hecht's problems |
+| Polarization | James Stewart, *Calculus: Early Transcendentals*, 8th ed., Cengage Learning, 2015, ch. 12 (vector nature of the E-field) | — | Hecht's polarization chapter | Hecht's problems |
+| Optical instruments (microscopes, telescopes, resolution limits) | Combines the geometric-optics and diffraction rows above | — | Hecht | Hecht's problems |
 
 ## Tier 2 — Graduate depth
 
-| Source | What it adds beyond Tier 1 |
+| Exact source | What it adds beyond Tier 1 |
 |---|---|
-| Max Born & Emil Wolf, *Principles of Optics* (Cambridge University Press) | The standard graduate optics reference — full electromagnetic (not ray-approximation) treatment of diffraction theory, coherence, and interferometry; reading the diffraction-theory chapters after Hecht is the single biggest optics depth upgrade available, and it directly explains *why* the ray-optics approximation in the earlier subtopics works at all (it's the short-wavelength limit of the full wave theory) |
+| Max Born & Emil Wolf, *Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light*, 7th expanded ed., Cambridge University Press, 1999 | The standard graduate optics reference — full electromagnetic (not ray-approximation) treatment of diffraction theory, coherence, and interferometry; explains *why* the ray-optics approximation works at all (it's the short-wavelength limit of the full wave theory) |
 
 ## Tier 3 — Research-literature depth
 
-| Source | Why it's here |
+| Exact source | Why it's here |
 |---|---|
-| Augustin-Jean Fresnel's original memoirs on diffraction (1818, submitted to the French Academy of Sciences) — historically notable as the paper whose diffraction predictions were confirmed by the famous "Poisson/Arago spot" experiment, turning a proposed *refutation* of the wave theory of light into its strongest confirmation | Seeing how a genuinely correct, non-obvious prediction (a bright spot at the center of a circular object's shadow) was derived and then tested is a better education in how physical theories actually get validated than any modern textbook re-telling |
-| James Clerk Maxwell's electromagnetic-wave sections in *A Treatise on Electricity and Magnetism* (already cited in `02-electromagnetism.md`) | The historical unification of optics with electromagnetism — light *as* an electromagnetic wave was Maxwell's result, and this topic file is where that unification actually gets used |
+| Augustin-Jean Fresnel, *Mémoire sur la diffraction de la lumière*, submitted to the French Academy of Sciences, 1818 (the Grand Prix memoir whose diffraction predictions were confirmed by the "Poisson/Arago spot" experiment) | Seeing a non-obvious, correct prediction (a bright spot at the center of a circular object's shadow) derived and then tested is a better education in how physical theories get validated than any modern retelling |
+| James Clerk Maxwell, *A Treatise on Electricity and Magnetism*, Clarendon Press, Oxford, 1873 (already cited in `02-electromagnetism.md`) | The historical unification of optics with electromagnetism — light as an electromagnetic wave |
 
 ## Problem sources specific to this topic
 
-- Hecht's own problems, worked chapter by chapter.
-- Irodov's optics chapter.
-- Kalda's *Optics* handout (part of his standard set) for olympiad-specific difficulty and technique.
-- *200 (More) Puzzling Physics Problems*'s optics sections.
+- Eugene Hecht's own problems, worked chapter by chapter.
+- I.E. Irodov, *Problems in General Physics*, Mir Publishers, 1981 — optics chapter.
+- Jaan Kalda's *Optics* handout (free; part of his standard olympiad handout set).
+- P. Gnädig, G. Honyek & K.F. Vigh, *200 Puzzling Physics Problems*, Cambridge University Press, 2001, and its 2016 sequel — optics sections.
 - ipho-unofficial.org archive, filtered to optics.
 
 ## Self-check milestone
 
-Given an unfamiliar multi-element optical system (e.g., two lenses and a mirror in some arrangement), ray-trace it correctly using the thin-lens/mirror equations in under 10 minutes, and separately, given a diffraction setup, correctly identify from the geometry alone (slit width vs. wavelength vs. distance to screen) whether you're in the Fraunhofer or Fresnel diffraction regime before choosing which formula to apply.
+Given an unfamiliar multi-element optical system, ray-trace it correctly using the thin-lens/mirror equations in under 10 minutes, and given a diffraction setup, correctly identify from the geometry (slit width vs. wavelength vs. screen distance) whether you're in the Fraunhofer or Fresnel regime before choosing a formula.

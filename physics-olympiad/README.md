@@ -46,22 +46,22 @@ But it does **not**, by itself, close what the field calls the instinct gap: the
 
 ## Quick master lookup — "I don't understand X, what math do I need"
 
-A fast-access index across every topic file. Use this when you already know exactly what physics idea is blocking you and just want the pointer; open the topic file for the full row (deeper tiers, problem sets, physics chapter).
+A fast-access index across every topic file. **Every row below is already inlined, with the exact book and chapter, directly inside the physics topic file itself** — you don't need to visit `00-mathematical-toolkit.md` to get the pointer; it's repeated right where you need it. That file exists only as the single-page complete reference if you want to read the whole toolkit once, end to end, before starting.
 
-| If you're stuck on... | Go read... | Full detail in |
-|---|---|---|
-| Taylor/small-angle approximations, why `sin θ ≈ θ` | Series & power series | `00-mathematical-toolkit.md` |
-| Dot/cross products, projecting forces | Vector algebra | `00-mathematical-toolkit.md` |
-| Gradient, divergence, curl, flux integrals | Vector calculus | `00-mathematical-toolkit.md`, applied in `02-electromagnetism.md` |
-| Eigenvalues/eigenvectors (normal modes, inertia tensor) | Linear algebra | `00-mathematical-toolkit.md`, applied in `01-mechanics.md` |
-| Solving `x'' + ω²x = 0` and driven/damped versions | Linear ODEs, constant coefficients | `00-mathematical-toolkit.md`, applied in `01-mechanics.md`, `03-oscillations-and-waves.md` |
-| Complex exponentials for AC circuits/waves | Complex numbers | `00-mathematical-toolkit.md`, applied in `02-electromagnetism.md`, `03-oscillations-and-waves.md` |
-| Fourier series for non-sinusoidal periodic driving/diffraction | Fourier analysis | `00-mathematical-toolkit.md`, applied in `03-oscillations-and-waves.md`, `04-optics.md` |
-| Rotating/non-inertial reference frames, fictitious forces | Vector calculus + rotation matrices | `00-mathematical-toolkit.md`, applied in `01-mechanics.md` |
-| The action integral / why Lagrangian mechanics works at all | Calculus of variations | `00-mathematical-toolkit.md`, applied in `01-mechanics.md` |
-| Partition functions, statistical averages | Multivariable calculus + combinatorics/probability | `00-mathematical-toolkit.md`, applied in `05-thermodynamics-and-statistical-physics.md` |
-| Wave equation as a PDE | Partial differential equations | `00-mathematical-toolkit.md`, applied in `03-oscillations-and-waves.md`, `04-optics.md` |
-| Propagating uncertainty through a formula | Partial derivatives (error propagation) | `07-experimental-physics.md` |
+| If you're stuck on... | Math tool | Exact source (also inlined in the topic file itself) | Applied in |
+|---|---|---|---|
+| Taylor/small-angle approximations, why `sin θ ≈ θ` | Series & power series | James Stewart, *Calculus: Early Transcendentals*, 8th ed., ch. 11; Mary L. Boas, *Mathematical Methods in the Physical Sciences*, 3rd ed., ch. 1 | `01-mechanics.md`, `06-modern-physics-relativity-and-quantum.md` |
+| Dot/cross products, projecting forces | Vector algebra | Stewart, ch. 12; H.M. Schey, *Div, Grad, Curl, and All That*, 4th ed., opening chapter | `01-mechanics.md`, `02-electromagnetism.md` |
+| Gradient, divergence, curl, flux integrals | Vector calculus | Schey, cover to cover; Boas, ch. 6 | `02-electromagnetism.md` |
+| Eigenvalues/eigenvectors (normal modes, inertia tensor) | Linear algebra | Gilbert Strang, *Introduction to Linear Algebra*, 5th ed., ch. "Eigenvalues and Eigenvectors" | `01-mechanics.md`, `03-oscillations-and-waves.md` |
+| Solving `x'' + ω²x = 0` and driven/damped versions | Linear ODEs, constant coefficients | Morris Tenenbaum & Harry Pollard, *Ordinary Differential Equations* (Dover) | `01-mechanics.md`, `03-oscillations-and-waves.md` |
+| Complex exponentials for AC circuits/waves | Complex numbers | Boas, ch. 2 | `02-electromagnetism.md`, `03-oscillations-and-waves.md`, `04-optics.md` |
+| Fourier series for non-sinusoidal periodic driving/diffraction | Fourier analysis | Boas, ch. 7 | `03-oscillations-and-waves.md`, `04-optics.md`, `06-modern-physics-relativity-and-quantum.md` |
+| Rotating/non-inertial reference frames, fictitious forces | Vector calculus + rotation | Schey; John R. Taylor, *Classical Mechanics*, ch. 9 | `01-mechanics.md` |
+| The action integral / why Lagrangian mechanics works at all | Calculus of variations | Boas, ch. 9; Cornelius Lanczos, *The Variational Principles of Mechanics*, 4th ed. | `01-mechanics.md` |
+| Partition functions, statistical averages | Multivariable calculus + probability | Stewart, ch. 14-15; Boas, ch. 15 | `05-thermodynamics-and-statistical-physics.md` |
+| Wave equation as a PDE | Partial differential equations | Boas, ch. 13 | `03-oscillations-and-waves.md`, `04-optics.md` |
+| Propagating uncertainty through a formula | Partial derivatives (error propagation) | Boas, ch. 4 | `07-experimental-physics.md` |
 
 ---
 
